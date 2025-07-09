@@ -1,0 +1,210 @@
+import type { Config } from "tailwindcss"
+
+const config: Config = {
+  darkMode: ["class"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+    "*.{js,ts,jsx,tsx,mdx}",
+  ],
+  prefix: "",
+  theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
+    extend: {
+      fontFamily: {
+        sans: ["Times New Roman", "Times", "serif"],
+        serif: ["Times New Roman", "Times", "serif"],
+        display: ["Times New Roman", "Times", "serif"],
+      },
+      colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+        // Soft pastel color palette
+        rose: {
+          50: "#fef7f7",
+          100: "#fdeaea",
+          200: "#fbd5d5",
+          300: "#f8b4b4",
+          400: "#f48888",
+          500: "#ec5a5a",
+          600: "#d73c3c",
+          700: "#b52d2d",
+          800: "#962929",
+          900: "#7c2828",
+        },
+        pink: {
+          50: "#fef7f3",
+          100: "#fdeee7",
+          200: "#fbd9cc",
+          300: "#f7baa0",
+          400: "#f29072",
+          500: "#ea6a47",
+          600: "#d84315",
+          700: "#b8360c",
+          800: "#942d0c",
+          900: "#792710",
+        },
+        lavender: {
+          50: "#faf8ff",
+          100: "#f3f0ff",
+          200: "#e9e5ff",
+          300: "#d6cdff",
+          400: "#bca5ff",
+          500: "#a374ff",
+          600: "#9146ff",
+          700: "#7c2d12",
+          800: "#6b21a8",
+          900: "#581c87",
+        },
+        peach: {
+          50: "#fef9f3",
+          100: "#fef0e7",
+          200: "#fcdcc3",
+          300: "#f9c394",
+          400: "#f5a063",
+          500: "#f2803f",
+          600: "#e3651d",
+          700: "#bc4c16",
+          800: "#963d18",
+          900: "#793317",
+        },
+        mint: {
+          50: "#f0fdf9",
+          100: "#ccfbef",
+          200: "#99f6e0",
+          300: "#5eead4",
+          400: "#2dd4bf",
+          500: "#14b8a6",
+          600: "#0d9488",
+          700: "#0f766e",
+          800: "#115e59",
+          900: "#134e4a",
+        },
+        cream: {
+          50: "#fffef7",
+          100: "#fffbeb",
+          200: "#fef3c7",
+          300: "#fde68a",
+          400: "#fcd34d",
+          500: "#fbbf24",
+          600: "#f59e0b",
+          700: "#d97706",
+          800: "#b45309",
+          900: "#92400e",
+        },
+        soft: {
+          50: "#fefefe",
+          100: "#fdfdfd",
+          200: "#fafafa",
+          300: "#f5f5f5",
+          400: "#eeeeee",
+          500: "#e0e0e0",
+          600: "#bdbdbd",
+          700: "#9e9e9e",
+          800: "#757575",
+          900: "#616161",
+        },
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "fade-in": {
+          "0%": { opacity: "0", transform: "translateY(10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "fade-in-up": {
+          "0%": { opacity: "0", transform: "translateY(30px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "slide-in-left": {
+          "0%": { opacity: "0", transform: "translateX(-30px)" },
+          "100%": { opacity: "1", transform: "translateX(0)" },
+        },
+        "slide-in-right": {
+          "0%": { opacity: "0", transform: "translateX(30px)" },
+          "100%": { opacity: "1", transform: "translateX(0)" },
+        },
+        "scale-in": {
+          "0%": { opacity: "0", transform: "scale(0.9)" },
+          "100%": { opacity: "1", transform: "scale(1)" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        "pulse-soft": {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.8" },
+        },
+        shimmer: {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fade-in 0.6s ease-out",
+        "fade-in-up": "fade-in-up 0.8s ease-out",
+        "slide-in-left": "slide-in-left 0.6s ease-out",
+        "slide-in-right": "slide-in-right 0.6s ease-out",
+        "scale-in": "scale-in 0.5s ease-out",
+        float: "float 3s ease-in-out infinite",
+        "pulse-soft": "pulse-soft 2s ease-in-out infinite",
+        shimmer: "shimmer 2s linear infinite",
+      },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        shimmer: "linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent)",
+      },
+    },
+  },
+  plugins: [require("tailwindcss-animate")],
+} satisfies Config
+
+export default config
