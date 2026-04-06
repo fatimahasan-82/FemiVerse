@@ -1,5 +1,12 @@
 # 🌸 FemiVerse — AI-Powered Women’s Health Platform
 
+## Status
+
+This project is currently under active development.  
+Core features and workflows are implemented, while additional enhancements and optimizations are continuously being added.
+
+---
+
 **FemiVerse** is a privacy-focused, AI-driven web application tailored specifically for women's health. Built with modern web technologies and explainable AI, it offers personalized symptom analysis, conversational health support, and professional report generation—all while putting data privacy and user control at the forefront.
 
 > *“The Future of Women's Health Begins at the Core”*  
